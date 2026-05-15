@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  web:
+    build: ./web
+    ports:
+      - "8080:8080"
+    environment:
+      - REDIS_ADDR=redis:6379
+      - GREETING=hello-from-axhub-282-e2e
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:7-alpine
+    volumes:
+      - redis-data:/data
+
+volumes:
+  redis-data:

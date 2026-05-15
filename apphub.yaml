@@ -1,0 +1,3 @@
+# AX Hub manifest — spec 282 priority: manifest > DB > default
+deploy_method: compose
+resource_tier: S
