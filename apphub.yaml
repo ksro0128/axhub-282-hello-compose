@@ -1,3 +1,4 @@
-# AX Hub manifest — spec 282 priority: manifest > DB > default
-deploy_method: compose
-resource_tier: S
+# AX Hub manifest — spec 282 (build.deploy_method nested)
+build:
+  deploy_method: compose
+  compose_file: docker-compose.yml
